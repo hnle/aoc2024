@@ -1,7 +1,8 @@
 def day2b(file_path: str) -> int:
     """Gets number of safe reports.
     Safe is defined as:
-    
+    1. The levels are either all increasing or all decreasing.
+    2. Any two adjacent levels differ by at least one and at most three.
     """
     def is_safe(levels):
         def is_valid(sequence):
@@ -36,7 +37,9 @@ def day2b(file_path: str) -> int:
 def day2a(file_path: str) -> int:
     """Gets number of safe reports.
     Safe is defined as:
-    
+    1. The levels are either all increasing or all decreasing.
+    2. Any two adjacent levels differ by at least one and at most three.
+    3. Can tolerate one bad level
     """
     def is_safe(nums: list[int]) -> bool:
         sign = nums[1] - nums[0]
@@ -51,7 +54,7 @@ def day2a(file_path: str) -> int:
     return count
 
 def main(file_path: str) -> None:
-    # print(day2a(file_path))
+    print(day2a(file_path))
     print(day2b(file_path))
     
 if __name__ == '__main__':
