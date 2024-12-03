@@ -15,10 +15,7 @@ def day3(text: str) -> None:
             if match[2] == "" and enabled:
                 ans += int(match[0]) * int(match[1])
             else:
-                if match[2] == "do()":
-                    enabled = True
-                else:
-                    enabled = False
+                enabled = match[2] == "do()"
         print(ans)
     
     part1()
