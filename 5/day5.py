@@ -1,6 +1,5 @@
 # https://adventofcode.com/2024/day/5
 # Note: By inspection we know we have order for each pair of numbers
-from pprint import pp
 
 def in_order(arr: list[int], order: dict[tuple, bool]) -> bool:
     return all(order[(arr[i], arr[i+1])] for i in range(len(arr)-1))
