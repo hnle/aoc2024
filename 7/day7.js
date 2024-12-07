@@ -14,7 +14,7 @@ function canObtain(target, arr) {
     if (target > last && canObtain(target - last, subarr)) {
         return true;
     }
-
+    // For part 2
     const sTarget = target.toString();
     const sLast = last.toString();
     if (sTarget.length > sLast.length && sTarget.endsWith(sLast) && canObtain(parseInt(sTarget.slice(0, -sLast.length)), arr.slice(0, -1))) {

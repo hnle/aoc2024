@@ -8,6 +8,7 @@ def main(file_path: str) -> None:
             return True
         if target > arr[-1] and can_obtain(target - arr[-1], arr[:-1]):
             return True
+        # For part 2
         # s_target = str(target)
         # s_last = str(arr[-1])
         # if len(s_target) > len(s_last) and s_target.endswith(s_last) and \
