@@ -3,7 +3,6 @@ const fs = require('fs');
 function main(filePath) {
   const data = fs.readFileSync(filePath, "utf8").split("\n");
   const counter = {};
-  console.log(data[0].split(' ').map(x => Number(x)));
   for (v of data[0].split(' ')) { // the last line is an empty line 
     counter[v] = (counter[v] || 0) + 1;
   }
