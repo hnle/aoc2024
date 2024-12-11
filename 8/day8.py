@@ -29,7 +29,6 @@ def main(file_path: str) -> None:
     antinode_count(start=1, n=1)
     # starts from 0 because we also count the 2 antenas
     antinode_count(start=0, n=rows)
-    # part2
     
     
 if __name__ == '__main__':
